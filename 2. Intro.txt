@@ -1,0 +1,51 @@
+Introduction
+Web service is a service delivered over web.
+Web->Business->Data
+W3C definition->Software system designed to support interoperable machine to machine interaction over
+a network.
+3 Keys:
+	designed for machine to machine applicatione 
+	shound be interoperable, not platform dependent
+	allow communication over network; jar
+How data exchange between application?
+	input is a request
+	output is a response
+Should be platform indipendent:
+	request response it will be indipendent too
+	The format is XML or
+	Json:Javascript object notation used on frontend
+How know the format of request and response
+	Service definition:
+		request/respons format; Request Structure; response structure; endpoint #how to  call where is avaible
+Terminology:
+	Request is the input
+	response is the outpunt
+	format of the request response
+	Service Provider #web service
+	service Consumer # consume the web service
+	Service definition is the contract bitween apps.
+	Transport: How the service is call. 2 format
+		HTTP 
+		MQ  # communication over the queue
+Web service groups:
+	Soap :Simple object access protocoll; Specifiches for constructing web service use XML for exchange
+		Define e specifich request and response structure envelope # Head body;
+		Soap define format and dont put limit to transport HTTP or MQ
+		Service definition : WSDL: web service definition language.
+			define the enpoint; operation; request and response structure
+	Rest # architeture aproach, restriction on format
+		REST: rappresentant state transfere Roy filding
+		Use HTTP interaction browser/server 
+		Resource
+			URI Uniform resource identifier
+			Different representations: XML, HTML, JSON (most useed)
+		No restiction on data format, uso only HTTP, no service definition. WADL, Swagger
+REST vs SOAP
+	restictions vd Architectural aproach
+	data format
+	service definition
+	transport
+	ease of implementation
+	
+
+
