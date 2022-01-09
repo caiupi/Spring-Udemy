@@ -1,0 +1,46 @@
+
+Tight coupling # dipendenza stretta	
+Louse coupling
+Bean dependencies
+Spring orginaze all this but we need to tell to spring
+	What are bean #(binary search is a bean @Componenet
+	what are the dependencies # Autowired to tell what is a dependency
+	Where search for beans # ComponentScan @SpringBootApplication
+	@SpringBootApplication # define the package where are the beans and the autowireed
+	Spring Application Contecst #SpringApplication contain all the beans
+
+Make the spring to manage the beans for us Spring manage the dependency and life cicle of beans
+
+logging.level.org.springframework = debug# for debug mode on application.proprioeties
+	first search for classes with component , scan for package
+	second create the bean and dependencyece
+	third finished the instance 
+	autowired via constructor injetion
+	create instance
+
+add more component faild is one bean for instance
+	solution using @Primary for make one componenet primary
+
+using setter innjection #set autowired
+constructor vs setter injection # most use setter
+
+modularity of spring
+	core container: beans core contexts spel
+	data access : jdbc orm (hybernate) oxm (XML communications) jms(onther application) transaction
+	web : websocket servlet web (spring mvc) portlet
+	crosscating : UniTesting 
+	AOP (security with oop)
+Spring projects: 
+	spring boot for microservice # quick start
+	spring cloud # build cloud native apps
+	spring data # consistent accesss
+	spring integration # problemens with application integration (design application)
+	spring batch # details
+	spring security # protect the application
+	spring HATEOAS #development hateoas serveces
+	onthers #web service androide
+spring mantain popularity : enable testable code, dependency injection (junit mockito)
+	: no plumbing code
+	: flexible architecture (module / projects)
+	: staying current
+
