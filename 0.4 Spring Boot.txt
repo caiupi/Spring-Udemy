@@ -15,4 +15,14 @@ Provide ready features
 
 Create rest service from start spring.io
 create webservice and a simple get data
+start web server and go to to localhost8080/
+autoconfiguration is the most important think on SpringBoot
 
+Spring boot vs Spring mvc vs Spring
+	On Spring help on Dependency injection for best testing, good integration  with onther frameworks
+	Spring MVC develop web application, dispacer, modelView, ViewResolver
+	SpringBoot autoconfigure, monitoring, containers, logging
+Starters
+	
+29
+	
