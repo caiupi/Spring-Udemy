@@ -1,0 +1,18 @@
+Spring boot most popular framework for microservices
+10 steps spring boot
+better mouch microservce than a big service
+Why spring boot ?
+Enable building production ready applications quickly
+provice common non -functional features
+	embedded servers, metrics, heaalth check esternalize configuration
+provide good web server integration and is not a automatic code generation
+
+Starter Projects# most important thing for spring boot
+	WEB JPA 
+Embedded servers - Tomcat, jetty or UnderTow # include tomcat on my jars
+Provide ready features
+	metrics and health checks, externalized configuration
+
+Create rest service from start spring.io
+create webservice and a simple get data
+
