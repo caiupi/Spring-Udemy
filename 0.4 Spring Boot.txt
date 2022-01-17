@@ -23,6 +23,21 @@ Spring boot vs Spring mvc vs Spring
 	Spring MVC develop web application, dispacer, modelView, ViewResolver
 	SpringBoot autoconfigure, monitoring, containers, logging
 Starters
+	spring boot starter web service 
+		# generally two types : Soap and Web
+	spring boot starter web Rest
+	spring boot starter Testing
+	spring boot starter JDMC
+	spring boot starter hateoas
+	spring boot starter Security (authentication autorization)
+	spring boot starter jpa (hibernate
+	spring boot starter cache #destibuted cache
+	spring boot starter data rest #expose data jtp with rest
+	spring boot starter Onther Too Monitoring Logging
+Spring BooT Activator
+	Brink monitoring
+	Expose Rest services
 	
-29
+	To use better activator need a browser hal browser
+			
 	
