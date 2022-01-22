@@ -36,8 +36,17 @@ Starters
 	spring boot starter Onther Too Monitoring Logging
 Spring BooT Activator
 	Brink monitoring
-	Expose Rest services
+	Expose Rest services (hal)
 	
-	To use better activator need a browser hal browser
+	To use better activator need a hal browser
+	management.endpoints.web.exposure.include=*  #Web  explosure
+	http://localhost:8080/browser/index.html#/  #Hal browser adress
+		browser activator for the matrics
+
+Spring boot devtools : 	For automaticlly refresh the server
+	more efficent, not load all dependency but load only the beans that needet
+	<artifactId>spring-boot-maven-plugin</artifactId>
+
+	
 			
 	

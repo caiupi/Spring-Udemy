@@ -1,0 +1,41 @@
+Soap Web Services
+	Three type of Soap on this course
+		Course 	Management,
+		concepts,
+		Tools
+
+ Need : Spring Web services, JPA,  H2
+	Service definition
+		xml xsd
+			Create a web service provider
+				Request
+					<Soap-ENV:Envelope 
+						Header
+						Body
+					</Soap-ENV:Envelope>
+				Response on XML	
+			Define the structure of structure on request response xml schema defenition
+		WSDL
+	XML Java BINDING 
+		JAXB (Java api xml binding (request resonse  use object and JAXB used
+	Framework Configuration
+		Endpoint : use JAXB and populate
+		WSDL - Generation
+	Soap web service client
+		Wisdler chrome plugin
+-------------------------------------------------
+XML Structure:
+	Define: GetCourseDetailsRequest -> GetCourseDetailResponse
+	input ->id 123
+	output ->response 
+	
+	NameSpace #Make unick XML structure for precent clashed beetween different structures
+		xmlns
+		
+	XSD: define the structure of the course
+		Validate the request if fine or not
+	XSD course and create java objects
+		Need JAXB" Maven Plugin
+		XSD
+		java
+		clear =false
