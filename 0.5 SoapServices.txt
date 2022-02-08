@@ -39,3 +39,7 @@ XML Structure:
 		XSD
 		java
 		clear =false
+		need a plugin that take xsd files and create java files
+		JAXB config where are the files where create the file. Attention to clear option
+	*The file on the folder resources it will be on the project class path so it will be visible for the java application.
+	
