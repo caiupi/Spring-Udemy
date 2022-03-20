@@ -1,0 +1,54 @@
+	Restful	web service 
+
+Spring.io
+	dependencies:web devops jpa h2
+	import and lounch the project
+
+Rest: REpresentational State Transfer
+	REST is a style how design your resources and how expose using http
+	Rest makes best use of HTTP methods( GET PUT POST), Status codes (200 404)
+	Resourse: key absraction each can have an URI (Uniform resources representation) and different representation
+	Example: Creae a user need POST /user
+	Need to create the restful services: Consider a social medea application :USER -> POST
+		retrive all users : get /userss
+		create a User :post /users
+		retrive one user : get /users/{id}-> /users/1
+		delete user : DELETE /user/{id}->/users/1
+		retrieve all post of user : GET /users/{id}/posts
+		create a post for a uset : post /users/{id}/posts/
+		retrive details of post : GET /users/{id}/posts/{post_id}
+	
+	@RestControllers	
+	@GetMapping	@PostMapping @RequestMapping
+	
+Answer the questons
+	Debug mode 
+	logging.level.org.springframework=debug
+	DispatcherServletAutoConfiguration
+	ErrorMvcAutoConfiguration
+	HttpMessageConvertersAutoConfiguration
+	JacksonAutoConfiguration
+	
+	DispatcherServlet take the request fined the mapping and use the respose (middle)
+	DispatcherServlet important for security too
+	DispatcherServlet is the Front controller for spring framework
+	
+	@ResponseBody : annotation for the format of the response
+	
+Path parameter: users/{id}	
+	@PathVariable
+	String.format("Strong %s", onther variable);
+
+User Bean and Service Bean
+	For the moment using static data (array List)
+	@Component
+		
+User Resource
+	@Autowired the @Component
+	http://localhost:8080/users/	
+	(user # data structure UesrDao #database UserResource #rest
+	@GetMapping @GetVariable
+
+60	
+		
+

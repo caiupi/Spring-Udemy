@@ -3,7 +3,10 @@ Soap Web Services
 		Course 	Management,
 		concepts,
 		Tools
-
+Soap need to define the format of the request and the response before start the webservices.
+Service definition (XML XSD WSDL)
+	need to create a web service provider
+	xml the comunication xsd the structure wsdl costruct automaticlly
  Need : Spring Web services, JPA,  H2
 	Service definition
 		xml xsd
@@ -17,11 +20,13 @@ Soap Web Services
 			Define the structure of structure on request response xml schema defenition
 		WSDL
 	XML Java BINDING 
-		JAXB (Java api xml binding (request resonse  use object and JAXB used
+		JAXB (Java api xml binding (request response  use object and JAXB used
+			create java object from xml file and viceversa
+			Take xsd and create java project
 	Framework Configuration
 		Endpoint : use JAXB and populate
 		WSDL - Generation
-	Soap web service client
+	Soap web service client that need for comunicate with the server
 		Wisdler chrome plugin
 -------------------------------------------------
 XML Structure:
@@ -42,4 +47,12 @@ XML Structure:
 		need a plugin that take xsd files and create java files
 		JAXB config where are the files where create the file. Attention to clear option
 	*The file on the folder resources it will be on the project class path so it will be visible for the java application.
+Udemy 41
+	(XML -> XSD -> WSDL)
+	
+	Bean 
+		MessageDispatcherServer
+		XSD Schema 
+	
+
 	
