@@ -49,6 +49,29 @@ User Resource
 	(user # data structure UesrDao #database UserResource #rest
 	@GetMapping @GetVariable
 
-60	
+60
+	Make a post we need a rest or a command line command
+	Talented api for send post request like rest 		
+62		
+	 ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
+	 ResponseEntity
+63
+	 Exception handling
+		@ResponseStatus(HttpStatus.NOT_FOUND)
+64	Implementing generic exception handling
+	Timestamp message detail
+	ResponseEntityExceptionHandler importent class for exception handler
+	applay this to all controller
+66 Delete method	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 
