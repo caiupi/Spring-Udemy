@@ -4,10 +4,11 @@ import java.net.URI;
 import java.util.Date;
 import java.util.List;
 
-import javax.websocket.server.PathParam;
-
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,15 @@ public class UserResource {
 		 }
 		 return user;
 	}
+	
+	@DeleteMapping("users/{id}")
+	public void deleteUser(@PathVariable int id) {
+		 User user = service.deleteByID(id);
+		 if(user==null) {
+			 throw new UserNotFoundExveption("ID : "+id);
+		 }
+	}
+	
 	@GetMapping("users/{id}/posts")
 	public List<Post> retriveUserPosts(@PathVariable int id) {
 		 User user = service.findOne(id);
@@ -43,7 +53,7 @@ public class UserResource {
 	}
 	
 	@PostMapping("users")
-	public ResponseEntity<Object> createUser(@RequestBody User user) {
+	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 		User savedUser=service.save(user);
 		URI location=ServletUriComponentsBuilder.fromCurrentRequest()
 		.path("/{id}").buildAndExpand(savedUser.getId()).toUri();

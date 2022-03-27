@@ -62,7 +62,10 @@ User Resource
 	Timestamp message detail
 	ResponseEntityExceptionHandler importent class for exception handler
 	applay this to all controller
-66 Delete method	
+66 Delete method
+68	Implementing Validation
+		hibernate-validator
+		validator api
 	
 	
 	
