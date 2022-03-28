@@ -3,9 +3,15 @@ package com.in28minutes.rest.webservices.restfulwebservice.user;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
-
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+ 
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,36 +33,40 @@ public class UserResource {
 	}
 
 	@GetMapping("users/{id}")
-	public User retriveUser(@PathVariable int id) {
-		 User user = service.findOne(id);
-		 if(user==null) {
-			 throw new UserNotFoundExveption("ID : "+id);
-		 }
-		 return user;
+	public EntityModel<User> retriveUser(@PathVariable int id) {
+		User user = service.findOne(id);
+		if (user == null) {
+			throw new UserNotFoundExveption("ID : " + id);
+		}
+
+		EntityModel<User> resource = EntityModel.of(user);
+		WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retriveAllUsers(service));
+		resource.add(linkTo.withRel("all-users"));
+		return resource;
 	}
-	
+
 	@DeleteMapping("users/{id}")
 	public void deleteUser(@PathVariable int id) {
-		 User user = service.deleteByID(id);
-		 if(user==null) {
-			 throw new UserNotFoundExveption("ID : "+id);
-		 }
+		User user = service.deleteByID(id);
+		if (user == null) {
+			throw new UserNotFoundExveption("ID : " + id);
+		}
 	}
-	
+
 	@GetMapping("users/{id}/posts")
 	public List<Post> retriveUserPosts(@PathVariable int id) {
-		 User user = service.findOne(id);
-		 if(user==null) {
-			 throw new UserNotFoundExveption("ID : "+id);
-		 }
-		 return user.getUserPosts();
+		User user = service.findOne(id);
+		if (user == null) {
+			throw new UserNotFoundExveption("ID : " + id);
+		}
+		return user.getUserPosts();
 	}
-	
+
 	@PostMapping("users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
-		User savedUser=service.save(user);
-		URI location=ServletUriComponentsBuilder.fromCurrentRequest()
-		.path("/{id}").buildAndExpand(savedUser.getId()).toUri();
+		User savedUser = service.save(user);
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId())
+				.toUri();
 		return ResponseEntity.created(location).build();
 	}
 

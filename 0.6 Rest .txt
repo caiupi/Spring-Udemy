@@ -66,6 +66,23 @@ User Resource
 68	Implementing Validation
 		hibernate-validator
 		validator api
+70	HATEOAS for RESTful Service		#Hypermedia as the Engine of Application State
+	EntityModel<User> resource = EntityModel.of(user);
+		WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retriveAllUsers(service));
+		resource.add(linkTo.withRel("all-users"));
+71 Advance RESTful service
+72 Internatiolazitation
+		configuration
+		localeresolver
+		default
+		resoursebundlemessageSource
+		
+		Autowire MessageSource
+		@RequestHeader
+		messageSource
+		
+		minute : 2
+	
 	
 	
 	

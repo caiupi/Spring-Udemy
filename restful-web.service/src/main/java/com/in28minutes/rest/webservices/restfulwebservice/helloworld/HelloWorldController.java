@@ -16,12 +16,18 @@ public class HelloWorldController {
 		return "Hello World";
 	}
 
-	@GetMapping(path="/hello-world-bean")
+	@GetMapping(path = "/hello-world-bean")
 	public HelloWorldBean helloWorlsBean() {
 		return new HelloWorldBean("Hello World Bean");
 	}
-	@GetMapping(path="/hello-world/path-variable/{name}")
+
+	@GetMapping(path = "/hello-world/path-variable/{name}")
 	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
-		return new HelloWorldBean(String.format("Hello World %s",name));
+		return new HelloWorldBean(String.format("Hello World %s", name));
+	}
+
+	@GetMapping(path = "/hello-world-in")
+	public String helloWorlInternationalized() {
+		return "Good Morning";
 	}
 }
