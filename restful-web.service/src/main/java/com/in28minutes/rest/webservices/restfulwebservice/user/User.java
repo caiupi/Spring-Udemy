@@ -7,12 +7,17 @@ import java.util.List;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+@ApiModel(description="All Details about user")
 public class User {
 	
 	private Integer id;
 	@Size(min = 2,message = "Name should have at least two carachter")
+	@ApiModelProperty(notes = "Name should at leat be 2 caracters")
 	private String name;
 	@Past
+	@ApiModelProperty(notes="Birth date can't be on the future")
 	private Date birthDate;
 	private List<Post> userPosts;
 

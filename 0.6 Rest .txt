@@ -80,9 +80,28 @@ User Resource
 		Autowire MessageSource
 		@RequestHeader
 		messageSource
+73 	Internatiolazitation semplification
+74	Content Negotiation
+		Choise the resource that we want but on reality need to negotiate 
+		Accept hearder important for negotiate the format
+		jackson jars makes the databinding from json to xml or onther typs
+76	Configure autogeneration of  swagger documantation
+		Swagger popular for documentation on REST
+		Swagger2 swagger-io
+		NEW URL for SWAGGER UI - http://localhost:8080/swagger-ui/ or http://localhost:8080/swagger-ui/index.html
+78	Swagger introduction
+		Info Path Definition (important things to swagger)
+		make the clients now about out structure have two ways
+			1) swagger json 2) swagger -ui
+79 	Swagger documentation
+		Give more info to the consumer improve the documentation
+80	Monitoring API's with Spring Boot Actuator
+	spring-boot-actuator #For monitoring
+	halt browser #Is a broser consist on links for the api are on the rest application
+	http://localhost:8080/
+		actuator on http://localhost:8080/actuator #se the health of application
 		
-		minute : 2
-	
+
 	
 	
 	
