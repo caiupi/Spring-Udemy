@@ -100,6 +100,24 @@ User Resource
 	halt browser #Is a broser consist on links for the api are on the rest application
 	http://localhost:8080/
 		actuator on http://localhost:8080/actuator #se the health of application
+81	IO Filtering
+	For filter the data than need we use filtering
+	@JsonIgnore
+	@JsonIgnoreProperties(value= {"field1" ,"field2"})
+	This is static filtering
+82	Dinamic Filtering
+		MappingJacksonValue
+		FilterProvider
+83	Verioning
+84 	Advance versioning
+		mapping
+		param
+		header
+		produces
+85	Authentication
+		Username: user 
+		pass: find on console
+		
 		
 
 	
