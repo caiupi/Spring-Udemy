@@ -1,0 +1,27 @@
+	JPA https://github.com/in28minutes/spring-web-services/tree/master/jpa-in-10-steps
+87	Theory of java persistance theory 
+		connect oop with sql : mapping
+		oop is different from sql language is the framework that solve the problem 
+			of connection this two concepts (persistance)
+		JDBC, Spring SDBC, myBatis #are the framework that resolve the problem of persistance
+		How work: Write the query that have parameter
+		JPA risolve the problem of object relation mapping (ORM	)
+			provide a mapping from Application Class to database server
+			Entity EntityManager 
+			Criteria API, JPQL for query the database
+			Jpa use annotation
+				@Table @Entity @Id
+				@ManyToMany 
+				@Inheritance
+				@DiscruminatorColumn
+		JPA is a interface a spacification
+		Hibernate implement JPA
+		JPA define ORM 
+		Hibernate implement it
+92	Entity EntityManager Repositiry Transaction		
+		@PersistenceContext
+		Command line runner
+94	CommandLineRunner
+		
+			
+		
