@@ -1,0 +1,7 @@
+Connection Rest JPA
+	spring.datasource.url=jdbc:h2:mem:testdb
+	spring.data.jpa.repositories.bootstrap-mode=default
+100	
+	spring.jpa.show-sql=true
+	spring.h2.console.enabled=true
+	

@@ -22,6 +22,17 @@
 		@PersistenceContext
 		Command line runner
 94	CommandLineRunner
+95	In memory database h2
+		data jpa, web,h2
+		H2 in memory database
+				spring.jpa.show-sql=true
+				spring.h2.console.enabled=true
+		Sptring boot Autoconfiguration create the schema
+96	JPA
+		Create a interface for repository extends JpaReporitory
+		use save for save the entity
+97	FindBy findAll
+98
 		
 			
 		
